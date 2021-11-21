@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Scheduler2">
+
+    <TextView
+        android:id="@+id/thu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="bottom|center"
+        android:text="목"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/wed"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_ten_min_down" />
+
+    <TextView
+        android:id="@+id/sat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="bottom|center"
+        android:text="토"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/fri"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_one_min_down" />
+
+    <TextView
+        android:id="@+id/mon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:gravity="bottom|center"
+        android:text="월"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/week"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_hour_down" />
+
+    <TextView
+        android:id="@+id/sun"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="bottom|center"
+        android:text="일"
+        app:layout_constraintStart_toEndOf="@+id/sat"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_one_min_down" />
+
+    <TextView
+        android:id="@+id/wed"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="bottom|center"
+        android:text="수"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/tue"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_ten_min_down" />
+
+    <TextView
+        android:id="@+id/tue"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="bottom|center"
+        android:text="화"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/mon"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_hour_down" />
+
+    <TextView
+        android:id="@+id/fri"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="bottom|center"
+        android:text="금"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/thu"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_one_min_down" />
+
+    <Button
+        android:id="@+id/button_add_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="확인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:text="TextView"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_start_ten_min_up"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▲"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/button_start_hour_up"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_start_hour_down"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="120dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▼"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_hour_up" />
+
+    <Button
+        android:id="@+id/button_end_hour_down"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="120dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▼"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_hour_up" />
+
+    <Button
+        android:id="@+id/button_start_ten_min_down"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▼"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/button_start_hour_down"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_ten_min_up" />
+
+    <Button
+        android:id="@+id/button_end_ten_min_up"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▲"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/button_end_hour_up"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_ten_min_down" />
+
+    <Button
+        android:id="@+id/button_end_ten_min_down"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▼"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/button_end_hour_down"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_ten_min_up" />
+
+    <Button
+        android:id="@+id/button_start_one_min_up"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▲"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/button_start_ten_min_up"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_end_one_min_up"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▲"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/button_end_ten_min_up"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_one_min_down" />
+
+    <Button
+        android:id="@+id/button_start_hour_up"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="100dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▲"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_end_one_min_down"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▼"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/button_end_ten_min_down"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_one_min_up" />
+
+    <Button
+        android:id="@+id/button_start_one_min_down"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▼"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/button_start_ten_min_down"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_one_min_up" />
+
+    <Button
+        android:id="@+id/button_end_hour_up"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="15dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:text="▲"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_hour_down" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="749dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="134dp"
+        android:gravity="center|center_vertical"
+        android:text="시작"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center|center_vertical"
+        android:text="종료"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
+
+    <TextView
+        android:id="@+id/week"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="54dp"
+        android:gravity="center|center_vertical"
+        android:text="요일"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/end" />
+
+    <Button
+        android:id="@+id/all_week"
+        android:layout_width="1080px"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:scaleX="0.85"
+        android:scaleY="0.85"
+        android:text="요일 전체 선택"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thu" />
+
+    <Button
+        android:id="@+id/choose_message"
+        android:layout_width="1080px"
+        android:layout_height="55dp"
+        android:scaleX="0.85"
+        android:scaleY="0.85"
+        android:text="메세지 선택"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/all_week" />
+
+    <Button
+        android:id="@+id/bt_pink"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#fccee2"
+        app:layout_constraintStart_toEndOf="@+id/bt_blue"
+        app:layout_constraintTop_toBottomOf="@+id/all_week"
+        app:rippleColor="@color/purple_200" />
+
+    <Button
+        android:id="@+id/bt_green"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#acfb3d"
+        app:layout_constraintStart_toEndOf="@+id/bt_pink"
+        app:layout_constraintTop_toBottomOf="@+id/all_week"
+        app:rippleColor="@color/purple_200" />
+
+    <Button
+        android:id="@+id/bt_blue"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#beebfd"
+        app:layout_constraintStart_toEndOf="@+id/color"
+        app:layout_constraintTop_toBottomOf="@+id/all_week"
+        app:rippleColor="@color/purple_200" />
+
+    <Button
+        android:id="@+id/bt_darkblue"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#9ec5d5"
+        app:layout_constraintStart_toEndOf="@+id/bt_green"
+        app:layout_constraintTop_toBottomOf="@+id/all_week"
+        app:rippleColor="@color/purple_200" />
+
+    <TextView
+        android:id="@+id/color"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="76dp"
+        android:gravity="center|center_vertical"
+        android:text="색상"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/all_week" />
+
+    <TextView
+        android:id="@+id/start_hour"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:gravity="right|center_vertical"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/button_start_hour_down"
+        app:layout_constraintStart_toEndOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_hour_up" />
+
+    <TextView
+        android:id="@+id/end_hour"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:gravity="right|center_vertical"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/button_end_hour_down"
+        app:layout_constraintStart_toEndOf="@+id/end"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_hour_up" />
+
+    <TextView
+        android:id="@+id/start_min"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/button_start_ten_min_down"
+        app:layout_constraintEnd_toStartOf="@+id/button_start_one_min_up"
+        app:layout_constraintStart_toEndOf="@+id/button_start_ten_min_up"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_ten_min_up" />
+
+    <TextView
+        android:id="@+id/end_min"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/button_end_ten_min_down"
+        app:layout_constraintEnd_toStartOf="@+id/button_end_one_min_up"
+        app:layout_constraintStart_toEndOf="@+id/button_end_ten_min_up"
+        app:layout_constraintTop_toBottomOf="@+id/button_end_ten_min_up" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
