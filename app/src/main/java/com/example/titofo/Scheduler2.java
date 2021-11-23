@@ -333,7 +333,7 @@ public class Scheduler2 extends AppManager {
         bt_green.setOnClickListener(bt_click) ;
         Button bt_darkblue = (Button) findViewById(R.id.bt_darkblue) ;
         bt_darkblue.setOnClickListener(bt_click) ;
-
+        //요일
         mon.setOnClickListener(text_click) ;
         tue.setOnClickListener(text_click) ;
         wed.setOnClickListener(text_click) ;
