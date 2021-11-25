@@ -9,18 +9,10 @@ import android.widget.TextView;
 
 public class Option extends AppManager{
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option);
-
-        page_main = new Intent(getApplicationContext(),MainActivity.class);
-        page_schedule1 = new Intent(getApplicationContext(),Scheduler1.class);
-        page_schedule2 = new Intent(getApplicationContext(),Scheduler2.class);
-        page_messenger = new Intent(getApplicationContext(),Messenger.class);
-        page_option =new Intent(getApplicationContext(),Option.class);
 
         Button move_to_main = (Button) findViewById(R.id.move_to_main);
         Button move_to_sheduler = (Button) findViewById(R.id.move_to_sheduler);
@@ -31,18 +23,18 @@ public class Option extends AppManager{
             public void onClick(View view) {
                 switch (view.getId()) {
                     case R.id.move_to_main:
-                        startActivity(page_main);
+                        start_page("main");
                         finish();
                         break;
                     case R.id.move_to_sheduler:
-                        startActivity(page_schedule1);
+                        start_page("scheduler1");
                         finish();
                         break;
                     case R.id.move_to_messenger:
                         finish();
                         break;
                     case R.id.move_to_option:
-                        startActivity(page_option);
+                        start_page("option");
                         finish();
                         break;
                 }
@@ -55,8 +47,6 @@ public class Option extends AppManager{
         move_to_sheduler.setOnClickListener(bt_click);
         move_to_messenger.setOnClickListener(bt_click);
         move_to_option.setOnClickListener(bt_click);
-
-
 
     }
 }
