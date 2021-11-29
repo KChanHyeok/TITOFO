@@ -57,7 +57,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="98dp"
             android:layout_marginTop="36dp"
-            android:text="오후"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/schedule_start_noon" />
@@ -68,7 +67,6 @@
             android:layout_height="21dp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="41dp"
-            android:text="00 : 00"
             app:layout_constraintStart_toEndOf="@+id/schedule_end_noon"
             app:layout_constraintTop_toBottomOf="@+id/schedule_start_time" />
 
@@ -78,7 +76,6 @@
             android:layout_height="18dp"
             android:layout_marginStart="27dp"
             android:layout_marginTop="24dp"
-            android:text="00 : 00"
             app:layout_constraintStart_toEndOf="@+id/schedule_start_noon"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,7 +85,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="24dp"
-            android:text="오전"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/schedule_subtitle"
             app:layout_constraintTop_toTopOf="parent" />

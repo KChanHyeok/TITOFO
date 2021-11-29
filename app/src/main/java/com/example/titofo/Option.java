@@ -31,16 +31,15 @@ public class Option extends AppManager{
                         finish();
                         break;
                     case R.id.move_to_messenger:
+                        start_page("option");
                         finish();
                         break;
                     case R.id.move_to_option:
-                        start_page("option");
                         finish();
                         break;
                 }
             }
         };
-
 
         move_to_main.setOnClickListener(bt_click);
         move_to_scheduler.setOnClickListener(bt_click);
