@@ -7,6 +7,8 @@ import java.util.Date;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract; //연락처 불러오기 위한 import
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -183,11 +185,21 @@ public class AppManager extends AppCompatActivity {
             selected_message = message;
         }
     }
+    void make_schedule_box(){
+        Subschedule sch = new Subschedule(getApplicationContext());
+        LinearLayout sch_mem = findViewById(R.id.schedule_members);
+        sch_mem.addView(sch);
+    }
+    void get_box_num(int num,int selected_num)
+    {
+        box_number = num;
+        selected_box_number = selected_num;
+    }
 
     //스케줄러 페이지
     int box_number = 0; //마지막 생성된 상자의 index번호(상자의 총 갯수)
     int selected_box_number = 0; //선택된 상자의 index번호
-    
+
     ScheduleBox[] schedule_box = new ScheduleBox[1000]; //class ScheduleBox의 객체
     ScheduleBox delete_box = new ScheduleBox(); //SchedulerBox의 1001번째 객체
     //delete_schedule_box로 스케줄박스를 지워줄 때 1000번째 상자에 데어터 초기값을 덮어씌우는 용도
@@ -207,7 +219,7 @@ public class AppManager extends AppCompatActivity {
         }
         box_number--;
     }//스케줄러박스를 지워주는 함수
-    
+
     //스케줄러 페이지2
     long now = System.currentTimeMillis();//현재 시간 가져오기
     Date date = new Date(now);//날짜 생성하기
@@ -217,7 +229,7 @@ public class AppManager extends AppCompatActivity {
     int get_min = Integer.parseInt(min_format.format(date));
     Calendar cal = Calendar.getInstance();
     int week_num = cal.get(Calendar.DAY_OF_WEEK);
-    
+
     boolean calculate(Boolean[] week,int hour, int min){
         int true_num = 0;
 

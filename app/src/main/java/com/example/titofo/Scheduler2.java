@@ -11,7 +11,7 @@ import java.lang.reflect.Array;
 
 public class Scheduler2 extends AppManager {
 
-    TextView test; //테스트용 텍스트 뷰
+    TextView subtitle; //테스트용 텍스트 뷰
     TextView start_hour;
     TextView start_min;
     TextView end_hour;
@@ -21,6 +21,9 @@ public class Scheduler2 extends AppManager {
     int week_num;
     int week_true_num;
 
+    int box_number = super.box_number;
+    int selected_box_number = super.box_number;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +31,7 @@ public class Scheduler2 extends AppManager {
 
         schedule_box[0] = new ScheduleBox();
 
-        test = (TextView)findViewById(R.id.subtitle);
+        subtitle = (TextView)findViewById(R.id.subtitle);
         start_hour = (TextView)findViewById(R.id.start_hour);
         start_min = (TextView)findViewById(R.id.start_min);
         end_hour = (TextView)findViewById(R.id.end_hour);
@@ -47,7 +50,11 @@ public class Scheduler2 extends AppManager {
         button_add_schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //확인버튼
+                if(selected_box_number == box_number){
+                    schedule_box[box_number] = new ScheduleBox();
+                }
                 selected_box_number++;
+                get_box_num(box_number,selected_box_number);
                 start_page("scheduler1");
                 finish();
             }
@@ -57,7 +64,7 @@ public class Scheduler2 extends AppManager {
         Button.OnClickListener bt_click = new Button.OnClickListener(){
             public void onClick(View view){
                 switch (view.getId()){
-                        //시작시간
+                    //시작시간
                     case R.id.button_start_hour_up:
                         schedule_box[selected_box_number].fix_start_hour(true);
                         start_hour.setText(Integer.toString(schedule_box[selected_box_number].schedule_start_hour));
@@ -88,7 +95,7 @@ public class Scheduler2 extends AppManager {
                         start_hour.setText(Integer.toString(schedule_box[selected_box_number].schedule_start_hour));
                         start_min.setText(Integer.toString(schedule_box[selected_box_number].schedule_start_min));
                         break;
-                        //종료시간
+                    //종료시간
                     case R.id.button_end_hour_up:
                         schedule_box[selected_box_number].fix_end_hour(true);
                         end_hour.setText(Integer.toString(schedule_box[selected_box_number].schedule_end_hour));
@@ -296,11 +303,10 @@ public class Scheduler2 extends AppManager {
         {
             week[week_num].setOnClickListener(text_click) ;
         }
-
-
-
     }
+    protected void onStart()
+    {
 
-
-
+        super.onStart();
+    }
 }
