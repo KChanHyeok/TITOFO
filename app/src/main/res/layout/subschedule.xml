@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/schedule_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Switch
+            android:id="@+id/schedule_switch"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="84dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/schedule_week" />
+
+        <ImageView
+            android:id="@+id/delete_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+        <TextView
+            android:id="@+id/schedule_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="24dp"
+            android:text="일정"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/schedule_week"
+            android:layout_width="119dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="24dp"
+            android:text="월 화 수 목 금 토 일"
+            app:layout_constraintStart_toEndOf="@+id/schedule_start_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/schedule_end_noon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="36dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/schedule_start_noon" />
+
+        <TextView
+            android:id="@+id/schedule_end_time"
+            android:layout_width="50dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="41dp"
+            app:layout_constraintStart_toEndOf="@+id/schedule_end_noon"
+            app:layout_constraintTop_toBottomOf="@+id/schedule_start_time" />
+
+        <TextView
+            android:id="@+id/schedule_start_time"
+            android:layout_width="50dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toEndOf="@+id/schedule_start_noon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/schedule_start_noon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="24dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/schedule_subtitle"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

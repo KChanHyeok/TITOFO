@@ -15,7 +15,7 @@ public class Option extends AppManager{
         setContentView(R.layout.activity_option);
 
         Button move_to_main = (Button) findViewById(R.id.move_to_main);
-        Button move_to_sheduler = (Button) findViewById(R.id.move_to_sheduler);
+        Button move_to_scheduler = (Button) findViewById(R.id.move_to_sheduler);
         Button move_to_messenger = (Button) findViewById(R.id.move_to_messenger);
         Button move_to_option = (Button) findViewById(R.id.move_to_option);
 
@@ -31,20 +31,18 @@ public class Option extends AppManager{
                         finish();
                         break;
                     case R.id.move_to_messenger:
-                        finish();
-                        break;
-                    case R.id.move_to_option:
                         start_page("option");
                         finish();
                         break;
+                    case R.id.move_to_option:
+                        finish();
+                        break;
                 }
-
             }
         };
 
-
         move_to_main.setOnClickListener(bt_click);
-        move_to_sheduler.setOnClickListener(bt_click);
+        move_to_scheduler.setOnClickListener(bt_click);
         move_to_messenger.setOnClickListener(bt_click);
         move_to_option.setOnClickListener(bt_click);
 
